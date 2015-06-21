@@ -26,7 +26,14 @@ int main(int argc, const char * argv[]) {
         [str replaceCharactersInRange:range withString:@"IOS"];
         NSLog(@"str = %@",str);
         
+        // 3.插入字符串
+        [str insertString:@"Android" atIndex:6];
+        NSLog(@"str = %@",str);
         
+        // 4.删除字符串
+        NSRange range1 = [str rangeOfString:@"Android"];
+        [str deleteCharactersInRange:range1];
+        NSLog(@"str = %@",str);
     }
     return 0;
 }
